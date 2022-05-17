@@ -1,5 +1,6 @@
 const express = require("express");
 const dotenv = require("dotenv");
+const cors = require("cors");
 const {
   bookingData,
   genres,
@@ -13,6 +14,7 @@ dotenv.config();
 const bookings = [...bookingData];
 
 const app = express();
+app.use(cors());
 
 app.use(express.json());
 
