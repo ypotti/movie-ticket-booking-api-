@@ -1,0 +1,21 @@
+{
+  "name": "my-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ypotti/movie-ticket-booking-api-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ypotti/movie-ticket-booking-api-/issues"
+  },
+  "homepage": "https://github.com/ypotti/movie-ticket-booking-api-#readme"
+}
