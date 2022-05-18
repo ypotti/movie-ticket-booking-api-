@@ -27,6 +27,77 @@ app.post("/registerBooking", (req, res) => {
   res.json(bookings);
 });
 
+app.get("/filmShowTimes", (req, res) => {
+  const film_id = req.query.film_id;
+  const date = req.query.date;
+  const response = {
+    date: date,
+    cinemas: [],
+  };
+  const getRandomTimes = () => {
+    return [
+      {
+        start_time: "10:30",
+        end_time: "12:44",
+      },
+      {
+        start_time: "12:00",
+        end_time: "14:14",
+      },
+      {
+        start_time: "12:30",
+        end_time: "14:44",
+      },
+      {
+        start_time: "13:00",
+        end_time: "15:14",
+      },
+      {
+        start_time: "14:30",
+        end_time: "16:44",
+      },
+      {
+        start_time: "15:00",
+        end_time: "17:14",
+      },
+      {
+        start_time: "15:30",
+        end_time: "17:44",
+      },
+      {
+        start_time: "17:00",
+        end_time: "19:14",
+      },
+      {
+        start_time: "17:30",
+        end_time: "19:44",
+      },
+      {
+        start_time: "18:00",
+        end_time: "20:14",
+      },
+      {
+        start_time: "19:30",
+        end_time: "21:44",
+      },
+      {
+        start_time: "20:00",
+        end_time: "22:14",
+      },
+    ];
+  };
+
+  const film_data = runningMovies.filter((film) => film.filmId == film_id);
+  const movies = film_data[0].locations;
+  response.cinemas = locs.filter((cinema) => movies.includes(cinema.name));
+  response.cinemas = response.cinemas.map((cinema) => ({
+    ...cinema,
+    times: getRandomTimes().slice(0, Math.floor(Math.random() * 11) + 1),
+  }));
+
+  res.json(response);
+});
+
 app.get("/genres", (req, res) => {
   res.json(genres);
 });
