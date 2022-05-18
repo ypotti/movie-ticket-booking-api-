@@ -876,6 +876,7 @@ const runningMovies = [
   },
 ];
 
+
 module.exports = {
   bookingData,
   genres,

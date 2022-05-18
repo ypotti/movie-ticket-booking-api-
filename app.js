@@ -22,8 +22,8 @@ app.get("/bookings", (req, res) => {
   res.json(bookings);
 });
 app.post("/registerBooking", (req, res) => {
-  const data = req.body;
-  bookings.push(data);
+  const booking_data = req.body;
+  bookings.push(booking_data);
   res.json(bookings);
 });
 
