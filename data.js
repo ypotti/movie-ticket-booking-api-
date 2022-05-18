@@ -346,7 +346,18 @@ const upcomingMovies = [
     synopsis_long:
       "The story revolves around an elderly couple Biswanath Sarkar (Soumitra Chattopadhyay) and Arati Sarkar (Swatilekha Sengupta). It focuses on different relationships that exist within a family and the bond that parents, children and other members of the family share together.",
     images: {
-      poster: [],
+      poster: {
+        1: {
+          image_orientation: "portrait",
+          region: "IN",
+          medium: {
+            film_image:
+              "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/belashuru-et00095543-15-03-2021-05-16-26.jpg",
+            width: 185,
+            height: 300,
+          },
+        },
+      },
     },
   },
   {
